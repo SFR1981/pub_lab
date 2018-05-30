@@ -27,10 +27,14 @@ attr_reader(:name, :till, :drinks)
   end
 
   def serve?(age)
-    return true if age >= 18
-    return false if age < 18
+      return true if age >= 18
+      return false if age < 18
 
   end
+  #
+  # def drunk?(drunkeness)
+  #
+  # end
 
 
 end

@@ -1,11 +1,13 @@
 class Customer
 
-  attr_reader(:name, :wallet, :age)
+  attr_reader(:name, :wallet, :age, :drunkeness)
+
   def initialize(name, wallet, age)
 
     @name = name
     @wallet = wallet
     @age = age
+    @drunkeness = 0.0
 
   end
 
@@ -21,15 +23,13 @@ class Customer
       spends(drink)
       pub.sale(drink)
       pub.sells_drink(drink)
+      @drunkeness += drink.alcohol_level()
+
     end
 
 
   end
 
+
+
 end
-#
-# def serve?(customer)
-#   return true if customer.age() >= 18
-#   return false if customer.age() < 18
-#
-# end

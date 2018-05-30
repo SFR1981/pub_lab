@@ -55,10 +55,16 @@ class CustomerTest < MiniTest::Test
 
   end
 
-  # def test_customer_drunkeness
-  #   assert_equal([], @customer2.drunkeness())
-  # end
+  def test_customer_drunkeness
+    assert_equal(0.0, @customer2.drunkeness())
+  end
 
 
+  def test_customer_alcohol_level_increases
+    @customer1.buys(@drink2, @pub)
+    assert_equal(6.0, @customer1.drunkeness())
+
+
+  end
 
 end
