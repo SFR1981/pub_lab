@@ -1,13 +1,24 @@
 class Pub
 
-attr_reader(:name, :till, :drinks)
+attr_reader(:name, :till, :drinks, :stock)
 
   def initialize(name, till, drinks)
 
     @name = name
     @till = till
     @drinks = drinks
+    @stock = {}
   end
+
+  # @stock = {
+  #   @drink1 => 23,
+  #   @drink2 =>10
+  # }
+  #
+  # total_value = 0
+  # for drink in @stock.keys()
+  #   total_value += drink.price * @stock[drink]
+  # end
 
   def add_drink(drink)
 

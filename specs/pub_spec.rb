@@ -15,6 +15,13 @@ def setup
 @customer2 = Customer.new("Steve", 19.0, 36)
 @customer1 = Customer.new("Tony", 19.0, 11)
 @pub = Pub.new("chanter", 500.99, [])
+# @pub.stock() = {
+#    @drink1 => 23,
+#    @drink2 =>10,
+#    @drink3 => 80
+#  }
+
+
 end
 
 def test_pub_has_name
@@ -85,5 +92,12 @@ end
 
 
  end
+
+ # def test_pub_has_stock
+ #   assert_equal({@drink1 => 23, @drink2 =>10, @drink3 => 80 },@pub.stock())
+ # end
+
+
+
 
 end
