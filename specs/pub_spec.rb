@@ -40,8 +40,12 @@ def test_pub_sells_drink
 
 end
 
-# def test_pub_makes_money
-#
-# end
+def test_pub_makes_money
+    @pub.add_drink(@drink3)
+    @pub.sale(@drink3)
+    assert_equal(504.69, @pub.till())
+
+
+end
 
 end

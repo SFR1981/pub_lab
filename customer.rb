@@ -15,4 +15,13 @@ class Customer
 
   end
 
+  def buys(drink, pub)
+
+    spends(drink)
+    pub.sale(drink)
+    pub.sells_drink(drink)
+
+
+  end
+
 end
