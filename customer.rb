@@ -8,6 +8,11 @@ class Customer
 
   end
 
+  def spends(drink)
 
+    @wallet -= drink.returns_price() if @wallet >= drink.returns_price()
+
+
+  end
 
 end

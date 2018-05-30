@@ -6,4 +6,11 @@ class Drink
     @name = name
     @price = price
   end
+
+
+  def returns_price
+
+    return @price
+
+  end
 end

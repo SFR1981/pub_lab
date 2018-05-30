@@ -13,5 +13,15 @@ end
 
 def test_drink_has_price
   assert_equal(1.20, @drink.price())
+
 end
+
+
+def test_drink_returns_price
+
+  assert_equal(1.20, @drink.returns_price())
+
+end
+
+
 end
