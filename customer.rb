@@ -19,7 +19,7 @@ class Customer
   end
 
   def buys(drink, pub)
-    if pub.serve?(@age)
+    if pub.serve?(@age) && !pub.drunk?(@drunkeness)
       spends(drink)
       pub.sale(drink)
       pub.sells_drink(drink)

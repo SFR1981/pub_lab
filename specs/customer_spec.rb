@@ -67,4 +67,15 @@ class CustomerTest < MiniTest::Test
 
   end
 
+  def test_customer_is_refused
+    @customer1.buys(@drink1, @pub)
+    @customer1.buys(@drink1, @pub)
+    @customer1.buys(@drink1, @pub)
+    @customer1.buys(@drink1, @pub)
+    @customer1.buys(@drink1, @pub)
+    assert_equal(96.19, @customer1.wallet().round(2))
+
+
+  end
+
 end

@@ -76,9 +76,14 @@ def test_customer_not_too_drunk
 
 end
 
-# def test_customer_too_drunk
-#
-#
-# end
+ def test_customer_too_drunk
+   @customer2.buys(@drink1, @pub)
+   @customer2.buys(@drink1, @pub)
+   @customer2.buys(@drink1, @pub)
+   @customer2.buys(@drink1, @pub)
+   assert_equal(true, @pub.drunk?(@customer2.drunkeness()))
+
+
+ end
 
 end

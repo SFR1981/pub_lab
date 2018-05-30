@@ -31,10 +31,11 @@ attr_reader(:name, :till, :drinks)
       return false if age < 18
 
   end
-  #
-  # def drunk?(drunkeness)
-  #
-  # end
+
+   def drunk?(drunkeness)
+      return (drunkeness > 20.0)
+
+   end
 
 
 end
