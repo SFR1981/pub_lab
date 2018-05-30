@@ -22,7 +22,7 @@ attr_reader(:name, :till, :drinks)
   end
 
   def sale(drink)
-    @till += drink.returns_price()
+    @till += drink.price()
 
   end
 

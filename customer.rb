@@ -13,7 +13,7 @@ class Customer
 
   def spends(drink)
 
-    @wallet -= drink.returns_price() if @wallet >= drink.returns_price()
+    @wallet -= drink.price() if @wallet >= drink.price()
 
 
   end
@@ -26,7 +26,12 @@ class Customer
       @drunkeness += drink.alcohol_level()
 
     end
+  end
 
+  def buys_food(food, pub)
+    spends(food)
+    pub.sale(food)
+    @drunkeness -= food.rejuvenation_level()
 
   end
 
