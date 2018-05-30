@@ -17,12 +17,19 @@ class Customer
   end
 
   def buys(drink, pub)
-
-    spends(drink)
-    pub.sale(drink)
-    pub.sells_drink(drink)
+    if pub.serve?(@age)
+      spends(drink)
+      pub.sale(drink)
+      pub.sells_drink(drink)
+    end
 
 
   end
 
 end
+#
+# def serve?(customer)
+#   return true if customer.age() >= 18
+#   return false if customer.age() < 18
+#
+# end

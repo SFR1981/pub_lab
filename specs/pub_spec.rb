@@ -52,9 +52,16 @@ def test_pub_makes_money
 end
 
 
-def _test_pub_serves_customer__success
+def test_pub_serves_customer__success
 
   assert_equal(true, @pub.serve?(@customer2))
+
+end
+
+
+def test_pub_serves_customer__fail
+
+  assert_equal(false, @pub.serve?(@customer1))
 
 end
 

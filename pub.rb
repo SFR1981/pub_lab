@@ -26,9 +26,9 @@ attr_reader(:name, :till, :drinks)
 
   end
 
-  def serve?(customer)
-    true if customer.age() >= 18
-    false if customer.age() < 18
+  def serve?(age)
+    return true if age >= 18
+    return false if age < 18
 
   end
 
